@@ -1,0 +1,54 @@
+.page {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #94a3b8;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+  padding: 3rem 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.backLink {
+  color: #7dd3fc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.backLink:hover {
+  color: #bae6fd;
+}
+
+.title {
+  margin: 0.8rem 0 0;
+  color: #e2e8f0;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.meta {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.content {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.section h2 {
+  margin: 0 0 0.8rem;
+  color: #e2e8f0;
+  font-size: 1.35rem;
+}
+
+.section p {
+  margin: 0 0 0.8rem;
+  line-height: 1.7;
+}

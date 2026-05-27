@@ -1,0 +1,531 @@
+{
+  "site": {
+    "name": "Martin Beck Andersen",
+    "role": "Experienced Front-End Engineer & Lead",
+    "intro": "I build exceptional and accessible digital experiences for the web.",
+    "phone": "+45 30 89 16 46",
+    "email": "martinbeck.and@gmail.com",
+    "resumePath": "/resume.pdf",
+    "authorAvatar": "/assets/images/martin2da4.jpg"
+  },
+  "seo": {
+    "home": {
+      "title": "Martin Beck Andersen - Experienced Front-End Engineer | Web Developer | Technology Enthusiast",
+      "description": "Experienced Front-End Engineer skilled in React, TypeScript, HTML5, CSS3, JavaScript. Offering full-stack development, web design, and multimedia solutions. Explore my diverse portfolio and professional experience."
+    },
+    "blog": {
+      "title": "Tech Industry Insights and Reflections | Martin Beck Andersen's Blog",
+      "description": "Explore insights and personal reflections on the tech industry by Martin Beck Andersen. Discover articles covering various aspects of technology and the journey of a lead engineer."
+    },
+    "archive": {
+      "title": "Martin Beck Andersen - All Projects",
+      "description": "Explore Martin Beck Andersen's diverse portfolio of projects. Discover web development projects built with React, TypeScript, HTML5, CSS3, WordPress, and more."
+    }
+  },
+  "navigation": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects"
+  },
+  "labels": {
+    "allPosts": "All Posts",
+    "allProjects": "All Projects",
+    "viewFull": "View Full",
+    "resume": "Resume",
+    "projectArchive": "Project Archive",
+    "viewAll": "View All",
+    "posts": "Posts",
+    "readMore": "Read More",
+    "followMe": "Follow Me",
+    "blog": "blog",
+    "home": "Home"
+  },
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/martin-beck-andersen-b57957123/?locale=en_US"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/In7elligence"
+    },
+    {
+      "label": "Stack Overflow",
+      "href": "https://stackoverflow.com/users/7535014/martin"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/mr.martinxyz"
+    },
+    {
+      "label": "Twitter",
+      "href": "https://twitter.com/martindevxyz"
+    }
+  ],
+  "aboutParagraphs": [
+    "Back in 2013, I discovered Computer Science and Multimedia Design and dove head-first into coding and web development. Fast-forward to today, and I've had the privilege of building a revolutionary platform in the energy sector, working for a web agency, and an international firm.",
+    "My main focus these days is developing high-quality, robust production code for an array of projects and various clients as a freelance software consultant. In my free time, I've helped people on Stack Overflow, as well as built personal and experimental projects."
+  ],
+  "aboutInteractive": {
+    "prefix": "I recently moved to Glasgow in the UK, so when I'm not at the computer, I'm either exploring Glasgow, enjoying music, or watching",
+    "movies": {
+      "text": "movies",
+      "href": "https://www.imdb.com/title/tt0816692/"
+    },
+    "middle": "and",
+    "shows": {
+      "text": "shows",
+      "href": "https://m.imdb.com/title/tt0944947/?ref_=chttvtp_t_13"
+    },
+    "suffix": "."
+  },
+  "experiences": [
+    {
+      "years": "2016 - PRESENT",
+      "role": "Freelancer",
+      "description": "As a freelancer, I offer a full 360 solution, including digital branding and marketing, as well as design, either within the full development cycle, or partially, depending on the client's needs. Most of the work consists of web design and web development for various clients in all industries.",
+      "technologies": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "SEO",
+        "Illustrator",
+        "Photoshop"
+      ]
+    },
+    {
+      "years": "2021 - 2023",
+      "role": "Lead Engineer",
+      "company": "i4energy",
+      "href": "https://i4.energy/",
+      "description": "Working closely together with the product team, architect and the software team to to build a high-end, holistic platform by the name ACROSS for the Energy sector. Notable clients include the Public Power Company of Greece (PPC) and their subsidiary, PPC Renewables. Evaluation and analytical inputs of tender offers also occurs from time to time. Coaching of team members. i4energy is the software company subsidiary of MAS S.A.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "JSS"
+      ]
+    },
+    {
+      "years": "2021 - 2021",
+      "role": "Front-End Engineer",
+      "company": "MAS S.A",
+      "href": "https://www.maseurope.com/",
+      "description": "Working on building a high-end, holistic platform by the name ACROSS for the Energy sector. Notable clients include the Public Power Company of Greece (PPC) and their subsidiary, PPC Renewables. This project was later moved under a subsidiary called i4energy.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "JSS"
+      ]
+    },
+    {
+      "years": "2020 - 2021",
+      "role": "Full-Stack Engineer",
+      "company": "SLEED",
+      "href": "https://www.sleed.com/",
+      "description": "Delivering high-quality, robust production code for a diverse array of projects for various clients; including, Spitishop, e-professor, Thanopoulos and many more.",
+      "technologies": [
+        "Prestashop",
+        "WordPress",
+        "JavaScript",
+        "PHP",
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "LESS",
+        "MySQL",
+        "SEO"
+      ]
+    },
+    {
+      "years": "2017 - 2018",
+      "role": "IT Designer",
+      "company": "ST-Consult ApS",
+      "href": "https://www.st-consult.dk/",
+      "description": "Development of a web based portal for consultants and businesses. Matching the two with each other based on various criteria. The portal includes management of candidates, businesses, projects, financial aspects and much more.",
+      "technologies": [
+        "WordPress",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
+      ]
+    },
+    {
+      "years": "2017 - 2017",
+      "role": "Tutor",
+      "company": "Business Academy SouthWest",
+      "href": "https://www.easv.dk/en/",
+      "description": "A month long tutoring of Multimedia Design students in HTML, CSS and SEO.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "SEO"
+      ]
+    },
+    {
+      "years": "2016 - 2016",
+      "role": "Intern",
+      "company": "Haug-IT ApS",
+      "href": "https://www.haug-it.dk/en/",
+      "description": "A 3 month long internship in a company, residing in a science park in Sonderborg, Denmark. The work consisted primarily of web analysis, web development, design, images and video.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "WordPress",
+        "PHP",
+        "SEO",
+        "Photoshop",
+        "Illustrator",
+        "Premier Pro",
+        "After Effects"
+      ]
+    }
+  ],
+  "featuredProjects": [
+    {
+      "year": "2026",
+      "name": "AutoM",
+      "company": "OJ Electronics",
+      "href": "https://ojelectronics.com/",
+      "summary": "An easy-to-use CLI tool to run automated user tests with a focus on black box testing on mobile apps. It includes smoke tests, usability tests, functional tests, flow-driven tests and user story driven tests.",
+      "technologies": [
+        "TypeScript",
+        "WebdriverIO",
+        "Mocha TS",
+        "Appium Server",
+        "Appium Studio",
+        "Appium Inspector",
+        "Android Device Bridge",
+        "scrcpy",
+        "Vysor",
+        "Android",
+        "iOS"
+      ],
+      "image": "/assets/images/oj-electronics1ecf.jpg"
+    },
+    {
+      "year": "2026",
+      "name": "Wraith",
+      "company": "OJ Electronics",
+      "href": "https://ojelectronics.com/",
+      "summary": "Professional Android GUI Test Automation Tool with Real-Time Screen Mirroring.",
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "Kotlin",
+        "Java",
+        "CSS",
+        "HTML",
+        "Electron",
+        "React",
+        "Scrcpy",
+        "Android",
+        "Anroid Device Bridge"
+      ],
+      "image": "/assets/images/wraith1f15.jpg"
+    },
+    {
+      "year": "2025",
+      "name": "Pathfinding Visualizer",
+      "href": "https://martin-pathfinding-visualizer.vercel.app/",
+      "summary": "A visualizer for all the popular pathfinding algorithms, including Dijkstra's, A* Search, Bellman-Ford, Greedy BFS, Bidirectional Swarm Algorithm, BFS and DFS in an interactive web app.",
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind"
+      ],
+      "image": "/assets/images/pathfinding-visualizer0d32.jpg"
+    },
+    {
+      "year": "2023",
+      "name": "ACROSS",
+      "company": "i4energy",
+      "href": "https://i4.energy/across/",
+      "summary": "A purpose-built digital energy ecosystem, specifically developed to offer Producers, Consumers and Aggregators a tool to manage complex energy portfolios.",
+      "technologies": [
+        "React",
+        "Backbone.js",
+        "TypeScript",
+        "JavaScript",
+        "Redux",
+        "Redux Toolkit",
+        "Node.js",
+        "Deno",
+        "Docker",
+        "MySQL",
+        "MongoDB",
+        "ElasticSearch",
+        "MQTT",
+        "Kafka",
+        "Node-RED",
+        "Keycloak",
+        "JSS",
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "LESS"
+      ],
+      "image": "/assets/images/acrosscece.jpg"
+    },
+    {
+      "year": "2021",
+      "name": "Podia Footcare",
+      "company": "SLEED",
+      "href": "https://podiafootcare.com/en/",
+      "summary": "A commercial website developed with WordPress for a company dealing with footcare.",
+      "technologies": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
+      ],
+      "image": "/assets/images/podia-footcareebb3.jpg"
+    },
+    {
+      "year": "2021",
+      "name": "e-professor",
+      "company": "SLEED",
+      "href": "https://e-professor.gr/",
+      "summary": "An online e-learning platform developed in WordPress.",
+      "technologies": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
+      ],
+      "image": "/assets/images/e-professor8e43.jpg"
+    },
+    {
+      "year": "2021",
+      "name": "Convert Group",
+      "company": "SLEED",
+      "href": "https://convertgroup.com/",
+      "summary": "A commercial website developed with WordPress for a company dealing with data analytics market intelligence.",
+      "technologies": [
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
+      ],
+      "image": "/assets/images/convert-group3438.jpg"
+    },
+    {
+      "year": "2020",
+      "name": "Dimitriadis Optics",
+      "company": "SLEED",
+      "href": "https://dimitriadisoptics.gr/el/",
+      "summary": "A webshop developed with PrestaShop for an optical store.",
+      "technologies": [
+        "PrestaShop",
+        "PHP",
+        "Symfony",
+        "JavaScript",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "Bootstrap"
+      ],
+      "image": "/assets/images/dimitriadis-optics6069.jpg"
+    }
+  ],
+  "archiveProjects": [
+    {
+      "year": "2026",
+      "name": "AutoM",
+      "company": "OJ Electronics",
+      "href": "https://ojelectronics.com/",
+      "technologies": ["TypeScript", "WebdriverIO", "Mocha TS", "Appium Server", "Appium Studio", "Appium Inspector", "Android Device Bridge", "scrcpy", "Vysor", "Android", "iOS"],
+      "linkLabel": "ojelectronics.com"
+    },
+    {
+      "year": "2026",
+      "name": "Wraith",
+      "company": "OJ Electronics",
+      "href": "https://ojelectronics.com/",
+      "technologies": ["TypeScript", "JavaScript", "Kotlin", "Java", "CSS", "HTML", "Electron", "React", "Scrcpy", "Android", "Anroid Device Bridge"],
+      "linkLabel": "ojelectronics.com"
+    },
+    {
+      "year": "2026",
+      "name": "Banshee",
+      "company": "OJ Electronics",
+      "href": "https://ojelectronics.com/",
+      "technologies": ["TypeScript", "Python", "Shell", "PowerShell", "JavaScript"],
+      "linkLabel": "ojelectronics.com"
+    },
+    {
+      "year": "2025",
+      "name": "Pathfinding Visualizer",
+      "href": "https://martin-pathfinding-visualizer.vercel.app/",
+      "technologies": ["Next.js", "React", "TypeScript", "HTML5", "CSS3", "Tailwind"],
+      "linkLabel": "martin-pathfinding-visualizer.vercel.app"
+    },
+    {
+      "year": "2023",
+      "name": "ACROSS",
+      "company": "i4energy",
+      "href": "https://i4.energy/across/",
+      "technologies": ["React", "Backbone.js", "TypeScript", "JavaScript", "Redux", "Redux Toolkit", "Node.js", "Deno", "Docker", "MySQL", "MongoDB", "ElasticSearch", "MQTT", "Kafka", "Node-RED", "Keycloak", "JSS", "HTML5", "CSS3", "SASS", "LESS"],
+      "linkLabel": "i4.energy"
+    },
+    {
+      "year": "2023",
+      "name": "Martin Beck Andersen",
+      "href": "/",
+      "technologies": ["Next.js", "React", "TypeScript", "HTML5", "CSS3", "Tailwind"],
+      "linkLabel": "martin-beck-andersen.com"
+    },
+    {
+      "year": "2023",
+      "name": "KetoFitGuru",
+      "href": "https://ketofitguru.vercel.app/",
+      "technologies": ["Next.js", "React", "TypeScript", "HTML5", "CSS3", "Tailwind"],
+      "linkLabel": "ketofitguru.vercel.app"
+    },
+    {
+      "year": "2022",
+      "name": "Alere",
+      "href": "https://alere.gr/",
+      "technologies": ["WordPress", "PHP", "JavaScript", "HTML5", "CSS3"],
+      "linkLabel": "alere.gr"
+    },
+    {
+      "year": "2021",
+      "name": "Marathos",
+      "company": "SLEED",
+      "href": "https://marathos.gr/",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "marathos.gr"
+    },
+    {
+      "year": "2021",
+      "name": "Nordia Marble",
+      "company": "SLEED",
+      "href": "https://nordiamarble.com/",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "nordiamarble.com"
+    },
+    {
+      "year": "2021",
+      "name": "Podia Footcare",
+      "company": "SLEED",
+      "href": "https://podiafootcare.com/en/",
+      "technologies": ["WordPress", "PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "podiafootcare.com"
+    },
+    {
+      "year": "2021",
+      "name": "Petropoulos Shell",
+      "company": "SLEED",
+      "href": "https://shell.petropoulos.com/",
+      "technologies": ["WordPress", "PHP", "JavaScript", "jQuery", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "shell.petropoulos.com"
+    },
+    {
+      "year": "2021",
+      "name": "LH Logismiki",
+      "company": "SLEED",
+      "href": "https://lhlogismiki.gr/en/",
+      "technologies": ["WordPress", "PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "lhlogismiki.gr"
+    },
+    {
+      "year": "2021",
+      "name": "e-professor",
+      "company": "SLEED",
+      "href": "https://e-professor.gr/",
+      "technologies": ["WordPress", "PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "e-professor.gr"
+    },
+    {
+      "year": "2021",
+      "name": "Convert Group",
+      "company": "SLEED",
+      "href": "https://convertgroup.com/",
+      "technologies": ["WordPress", "PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "convertgroup.com"
+    },
+    {
+      "year": "2021",
+      "name": "Spitishop",
+      "company": "SLEED",
+      "href": "https://spitishop.gr/",
+      "technologies": ["PrestaShop", "PHP", "Symfony", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "spitishop.gr"
+    },
+    {
+      "year": "2021",
+      "name": "Thanopoulos",
+      "company": "SLEED",
+      "href": "https://thanopoulos.gr/el/",
+      "technologies": ["PrestaShop", "PHP", "Symfony", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "thanopoulos.gr"
+    },
+    {
+      "year": "2021",
+      "name": "Alouette",
+      "company": "SLEED",
+      "href": "https://alouette.gr/en/",
+      "technologies": ["PrestaShop", "PHP", "Symfony", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "alouette.gr"
+    },
+    {
+      "year": "2020",
+      "name": "Dimitriadis Optics",
+      "company": "SLEED",
+      "href": "https://dimitriadisoptics.gr/el/",
+      "technologies": ["PrestaShop", "PHP", "Symfony", "JavaScript", "MySQL", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "dimitriadisoptics.gr"
+    },
+    {
+      "year": "2018",
+      "name": "PITEQ",
+      "company": "ST-ConsultT ApS",
+      "technologies": ["WordPress", "PHP", "JavaScript", "jQuery", "AJAX", "MySQL", "HTML5", "CSS3", "Bootstrap"]
+    },
+    {
+      "year": "2016",
+      "name": "Sonderkobbel Strand Camping",
+      "technologies": ["WordPress", "PHP", "JavaScript", "HTML5", "CSS3", "Bootstrap"]
+    },
+    {
+      "year": "2016",
+      "name": "Vinfloden",
+      "technologies": ["WordPress", "PHP", "JavaScript", "HTML5", "CSS3", "Bootstrap"]
+    },
+    {
+      "year": "2016",
+      "name": "24-7Levering",
+      "technologies": ["WordPress", "PHP", "JavaScript", "HTML5", "CSS3", "Bootstrap"]
+    },
+    {
+      "year": "2016",
+      "name": "Sonderborg Vakstrad",
+      "company": "Haug-IT ApS",
+      "href": "https://svr.sonderborg.dk/",
+      "technologies": ["WordPress", "PHP", "JavaScript", "HTML5", "CSS3", "Bootstrap"],
+      "linkLabel": "svr.sonderborg.dk"
+    }
+  ]
+}

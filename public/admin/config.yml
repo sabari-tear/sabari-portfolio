@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: CHANGE_ME_OWNER/CHANGE_ME_REPO
+  branch: main
+  base_url: https://CHANGE_ME_VERCEL_DOMAIN
+  auth_endpoint: api/auth
+
+local_backend: true
+publish_mode: editorial_workflow
+
+media_folder: public/assets/images
+public_folder: /assets/images
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Summary, name: summary, widget: text }
+      - label: Tags
+        name: tags
+        widget: list
+        field: { label: Tag, name: tag, widget: string }
+      - { label: Meta Description, name: metaDescription, widget: text }
+      - { label: Thumbnail Image, name: image, widget: image }
+      - { label: Banner Image, name: bannerImage, widget: image }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: site
+    label: Site Content
+    files:
+      - label: Main Site Content
+        name: site_content
+        file: content/site/site-content.json
+        format: json
+        fields:
+          - label: Site
+            name: site
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Intro, name: intro, widget: text }
+              - { label: Phone, name: phone, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Resume Path, name: resumePath, widget: string }
+              - { label: Author Avatar, name: authorAvatar, widget: string }
+          - label: About Paragraphs
+            name: aboutParagraphs
+            widget: list
+            field: { label: Paragraph, name: paragraph, widget: text }
+          - label: Social Links
+            name: socialLinks
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: href, widget: string }
