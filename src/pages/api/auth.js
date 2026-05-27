@@ -1,10 +1,14 @@
 const { createHandlers } = require("netlify-cms-oauth-provider-node");
+const { loadEnvConfig } = require("@next/env");
+
+loadEnvConfig(process.cwd());
 
 function getRequestOrigin(req) {
   const protocolHeader = req.headers["x-forwarded-proto"];
   const hostHeader = req.headers["x-forwarded-host"] || req.headers.host;
-  const protocol = Array.isArray(protocolHeader) ? protocolHeader[0] : protocolHeader || "https";
+  const forwardedProtocol = Array.isArray(protocolHeader) ? protocolHeader[0] : protocolHeader;
   const host = Array.isArray(hostHeader) ? hostHeader[0] : hostHeader;
+  const protocol = forwardedProtocol || (req.socket && req.socket.encrypted ? "https" : "http");
   return `${protocol}://${host}`;
 }
 
@@ -12,8 +16,8 @@ function getConfig(req) {
   const requestOrigin = getRequestOrigin(req);
   const origin = process.env.CMS_OAUTH_ORIGIN || requestOrigin;
   const completeUrl = process.env.CMS_OAUTH_COMPLETE_URL || `${requestOrigin}/api/auth`;
-  const oauthClientID = process.env.GITHUB_OAUTH_CLIENT_ID;
-  const oauthClientSecret = process.env.GITHUB_OAUTH_CLIENT_SECRET;
+  const oauthClientID = process.env.GITHUB_OAUTH_CLIENT_ID || process.env.CMS_GITHUB_OAUTH_CLIENT_ID;
+  const oauthClientSecret = process.env.GITHUB_OAUTH_CLIENT_SECRET || process.env.CMS_GITHUB_OAUTH_CLIENT_SECRET;
 
   if (!oauthClientID || !oauthClientSecret) {
     return { error: "Missing GITHUB_OAUTH_CLIENT_ID or GITHUB_OAUTH_CLIENT_SECRET environment variables." };

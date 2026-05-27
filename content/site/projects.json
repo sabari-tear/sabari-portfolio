@@ -1,0 +1,21 @@
+{
+  "featuredProjects": [
+    {
+      "year": "2024",
+      "name": "Your Featured Project",
+      "href": "https://yourproject.com",
+      "summary": "Describe what this project does and the problem it solves.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind"],
+      "image": "/assets/images/placeholder.jpg"
+    }
+  ],
+  "archiveProjects": [
+    {
+      "year": "2024",
+      "name": "Your Archive Project",
+      "href": "https://yourproject.com",
+      "technologies": ["Next.js", "TypeScript", "Tailwind"],
+      "linkLabel": "yourproject.com"
+    }
+  ]
+}

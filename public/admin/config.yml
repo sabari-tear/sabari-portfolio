@@ -1,11 +1,10 @@
 backend:
   name: github
-  repo: CHANGE_ME_OWNER/CHANGE_ME_REPO
+  repo: sabari-tear/sabari-portfolio
   branch: main
-  base_url: https://CHANGE_ME_VERCEL_DOMAIN
+  base_url: http://localhost:3000
   auth_endpoint: api/auth
 
-local_backend: true
 publish_mode: editorial_workflow
 
 media_folder: public/assets/images
@@ -35,29 +34,155 @@ collections:
   - name: site
     label: Site Content
     files:
-      - label: Main Site Content
-        name: site_content
-        file: content/site/site-content.json
+
+      # ── 1. Name Card ────────────────────────────────────────────
+      - label: "Name Card"
+        name: identity
+        file: content/site/identity.json
         format: json
         fields:
-          - label: Site
+          - label: Identity
             name: site
             widget: object
             fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Role, name: role, widget: string }
-              - { label: Intro, name: intro, widget: text }
+              - { label: Your Name, name: name, widget: string }
+              - { label: Your Role/Title, name: role, widget: string }
+              - { label: Intro Tagline, name: intro, widget: text }
               - { label: Phone, name: phone, widget: string }
               - { label: Email, name: email, widget: string }
-              - { label: Resume Path, name: resumePath, widget: string }
-              - { label: Author Avatar, name: authorAvatar, widget: string }
-          - label: About Paragraphs
-            name: aboutParagraphs
-            widget: list
-            field: { label: Paragraph, name: paragraph, widget: text }
+              - { label: Resume PDF Path, name: resumePath, widget: string }
+              - { label: Avatar Image, name: authorAvatar, widget: image }
           - label: Social Links
             name: socialLinks
             widget: list
+            collapsed: true
+            summary: "{{fields.label}}"
             fields:
               - { label: Label, name: label, widget: string }
               - { label: URL, name: href, widget: string }
+
+      # ── 2. About ────────────────────────────────────────────────
+      - label: About
+        name: about
+        file: content/site/about.json
+        format: json
+        fields:
+          - label: About Text
+            name: aboutText
+            widget: text
+          - label: Highlight Phrases
+            name: aboutHighlights
+            widget: list
+            collapsed: true
+            field: { label: Phrase, name: phrase, widget: string }
+
+      # ── 3. Experience ───────────────────────────────────────────
+      - label: Experience
+        name: experience
+        file: content/site/experience.json
+        format: json
+        fields:
+          - label: Experience
+            name: experiences
+            widget: list
+            collapsed: true
+            summary: "{{fields.role}} | {{fields.company}} | {{fields.years}}"
+            fields:
+              - { label: "Years (e.g. 2020 - 2022)", name: years, widget: string }
+              - { label: Role/Job Title, name: role, widget: string }
+              - { label: Company Name, name: company, widget: string, required: false }
+              - { label: Company URL, name: href, widget: string, required: false }
+              - { label: Description, name: description, widget: text }
+              - label: Technologies
+                name: technologies
+                widget: list
+                field: { label: Technology, name: tech, widget: string }
+
+      # ── 4. Projects ─────────────────────────────────────────────
+      - label: Projects
+        name: projects
+        file: content/site/projects.json
+        format: json
+        fields:
+          - label: Featured Projects
+            name: featuredProjects
+            widget: list
+            collapsed: true
+            summary: "{{fields.name}} ({{fields.year}})"
+            fields:
+              - { label: Year, name: year, widget: string }
+              - { label: Project Name, name: name, widget: string }
+              - { label: Company, name: company, widget: string, required: false }
+              - { label: URL, name: href, widget: string }
+              - { label: Summary, name: summary, widget: text }
+              - label: Technologies
+                name: technologies
+                widget: list
+                field: { label: Technology, name: tech, widget: string }
+              - { label: Screenshot Image, name: image, widget: image, required: false }
+          - label: Archive Projects
+            name: archiveProjects
+            widget: list
+            collapsed: true
+            summary: "{{fields.name}} ({{fields.year}})"
+            fields:
+              - { label: Year, name: year, widget: string }
+              - { label: Project Name, name: name, widget: string }
+              - { label: Company, name: company, widget: string, required: false }
+              - { label: URL, name: href, widget: string, required: false }
+              - label: Technologies
+                name: technologies
+                widget: list
+                field: { label: Technology, name: tech, widget: string }
+              - { label: Link Label, name: linkLabel, widget: string, required: false }
+
+      # ── 5. Site Settings (Advanced) ───────────────────────────
+      - label: "Site Settings (Advanced)"
+        name: settings
+        file: content/site/settings.json
+        format: json
+        fields:
+          - label: SEO
+            name: seo
+            widget: object
+            fields:
+              - label: Home Page SEO
+                name: home
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+              - label: Blog Page SEO
+                name: blog
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+              - label: Archive Page SEO
+                name: archive
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Navigation Labels
+            name: navigation
+            widget: object
+            fields:
+              - { label: About, name: about, widget: string }
+              - { label: Experience, name: experience, widget: string }
+              - { label: Projects, name: projects, widget: string }
+          - label: UI Labels
+            name: labels
+            widget: object
+            fields:
+              - { label: All Posts, name: allPosts, widget: string }
+              - { label: All Projects, name: allProjects, widget: string }
+              - { label: View Full, name: viewFull, widget: string }
+              - { label: Resume, name: resume, widget: string }
+              - { label: Project Archive, name: projectArchive, widget: string }
+              - { label: View All, name: viewAll, widget: string }
+              - { label: Posts, name: posts, widget: string }
+              - { label: Read More, name: readMore, widget: string }
+              - { label: Follow Me, name: followMe, widget: string }
+              - { label: Blog, name: blog, widget: string }
+              - { label: Home, name: home, widget: string }

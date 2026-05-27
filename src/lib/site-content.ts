@@ -1,4 +1,8 @@
-import rawContent from "../../content/site/site-content.json";
+import identityRaw from "../../content/site/identity.json";
+import settingsRaw from "../../content/site/settings.json";
+import aboutRaw from "../../content/site/about.json";
+import experienceRaw from "../../content/site/experience.json";
+import projectsRaw from "../../content/site/projects.json";
 
 export type SocialLink = {
   label: string;
@@ -59,17 +63,17 @@ export type SiteContent = {
     home: string;
   };
   socialLinks: SocialLink[];
-  aboutParagraphs: string[];
-  aboutInteractive: {
-    prefix: string;
-    movies: { text: string; href: string };
-    middle: string;
-    shows: { text: string; href: string };
-    suffix: string;
-  };
+  aboutText: string;
+  aboutHighlights: string[];
   experiences: ExperienceItem[];
   featuredProjects: ProjectItem[];
   archiveProjects: ProjectItem[];
 };
 
-export const siteContent = rawContent as SiteContent;
+export const siteContent: SiteContent = {
+  ...identityRaw,
+  ...settingsRaw,
+  ...aboutRaw,
+  ...experienceRaw,
+  ...projectsRaw,
+};

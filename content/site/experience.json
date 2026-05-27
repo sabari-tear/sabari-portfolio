@@ -1,0 +1,12 @@
+{
+  "experiences": [
+    {
+      "years": "2022 - PRESENT",
+      "role": "Your Current Role",
+      "company": "Your Company",
+      "href": "https://yourcompany.com",
+      "description": "Describe your responsibilities, achievements, and the impact you had in this role.",
+      "technologies": ["React", "TypeScript", "Node.js"]
+    }
+  ]
+}

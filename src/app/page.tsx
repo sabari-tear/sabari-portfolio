@@ -6,7 +6,7 @@ import { SocialIconLinks } from "@/components/social-icon-links";
 import { getAllPostsMeta } from "@/lib/blog";
 import { siteContent } from "@/lib/site-content";
 
-const { aboutParagraphs, experiences, featuredProjects } = siteContent;
+const { experiences, featuredProjects } = siteContent;
 
 function ExternalArrowIcon() {
   return (
@@ -31,25 +31,33 @@ export const metadata: Metadata = {
   description: siteContent.seo.home.description,
 };
 
-function AnimatedWord({ text, groupClass }: { text: string; groupClass: "movies" | "shows" }) {
-  const hoverClass =
-    groupClass === "movies"
-      ? "group-hover/movies:text-blue-300 group-hover/movies:-translate-y-px"
-      : "group-hover/shows:text-blue-300 group-hover/shows:-translate-y-px";
+function escapeRegex(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
 
-  return (
-    <>
-      {text.split("").map((letter, index) => (
-        <span
-          key={`${groupClass}-${letter}-${index}`}
-          className={`${hoverClass} transition duration-75`}
-          style={{ transitionDelay: `${50 + index * 25}ms` }}
-        >
-          {letter}
-        </span>
-      ))}
-    </>
-  );
+function renderWithHighlights(text: string, highlights: string[]) {
+  const activeHighlights = highlights.filter((item) => item.trim().length > 0);
+
+  if (activeHighlights.length === 0) {
+    return text;
+  }
+
+  const pattern = new RegExp(`(${activeHighlights.map((item) => escapeRegex(item)).join("|")})`, "gi");
+  const segments = text.split(pattern);
+
+  return segments.map((segment, index) => {
+    const isHighlight = activeHighlights.some((item) => item.toLowerCase() === segment.toLowerCase());
+
+    if (!isHighlight) {
+      return segment;
+    }
+
+    return (
+      <span key={`about-highlight-${segment}-${index}`} className="font-medium text-slate-200">
+        {segment}
+      </span>
+    );
+  });
 }
 
 export default async function Home() {
@@ -124,20 +132,14 @@ export default async function Home() {
                 <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
                   <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About Me">
                     <div>
-                      {aboutParagraphs.slice(0, 2).map((paragraph) => (
-                        <p key={paragraph} className="mb-4" data-reveal>{paragraph}</p>
-                      ))}
-                      <p className="mb-4" data-reveal>
-                        {siteContent.aboutInteractive.prefix}{" "}
-                        <a className="group/movies inline-flex lg:cursor-[url('/images/mouseover/interstellar.png'),_pointer] font-medium text-slate-200" target="_blank" rel="noreferrer" href={siteContent.aboutInteractive.movies.href}>
-                          <AnimatedWord text={siteContent.aboutInteractive.movies.text} groupClass="movies" />
-                        </a>{" "}
-                        {siteContent.aboutInteractive.middle}{" "}
-                        <a className="group/shows inline-flex lg:cursor-[url('/images/mouseover/got.png'),_pointer] font-medium text-slate-200 hover:text-blue-300 focus-visible:text-blue-300" target="_blank" rel="noreferrer" href={siteContent.aboutInteractive.shows.href}>
-                          <AnimatedWord text={siteContent.aboutInteractive.shows.text} groupClass="shows" />
-                        </a>
-                        {siteContent.aboutInteractive.suffix}
-                      </p>
+                      {siteContent.aboutText
+                        .split(/\n\s*\n/)
+                        .filter((paragraph) => paragraph.trim().length > 0)
+                        .map((paragraph, index) => (
+                          <p key={`about-${index}`} className="mb-4" data-reveal>
+                            {renderWithHighlights(paragraph, siteContent.aboutHighlights)}
+                          </p>
+                        ))}
                     </div>
                   </section>
 

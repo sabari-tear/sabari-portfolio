@@ -62,6 +62,12 @@ After this, CMS edits create commits and editorial workflow entries directly in 
 
 ### Local testing
 
-1. Run npm run dev
-2. Open /admin
-3. Local backend support is enabled in public/admin/config.yml
+1. In GitHub OAuth app, set Home URL to http://localhost:3000
+2. In GitHub OAuth app, set Authorization callback URL to http://localhost:3000/api/auth
+3. In .env.local add:
+  - GITHUB_OAUTH_CLIENT_ID=your_local_app_client_id
+  - GITHUB_OAUTH_CLIENT_SECRET=your_local_app_client_secret
+4. Run npm run dev
+5. Open http://localhost:3000/admin
+
+Note: GitHub OAuth apps support one callback URL per app. Use a separate OAuth app for local and production to avoid constantly changing callback URLs.

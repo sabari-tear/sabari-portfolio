@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { MotionRuntime } from "@/components/motion-runtime";
+import { siteContent } from "@/lib/site-content";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,9 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Martin Beck Andersen - Experienced Front-End Engineer | Web Developer | Technology Enthusiast",
-  description:
-    "Experienced Front-End Engineer skilled in React, TypeScript, HTML5, CSS3, JavaScript. Offering full-stack development, web design, and multimedia solutions. Explore my diverse portfolio and professional experience.",
+  title: siteContent.seo.home.title,
+  description: siteContent.seo.home.description,
 };
 
 export default function RootLayout({

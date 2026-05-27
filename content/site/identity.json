@@ -1,0 +1,33 @@
+{
+  "site": {
+    "name": "Your Name",
+    "role": "Your Role & Title",
+    "intro": "I build exceptional and accessible digital experiences for the web.",
+    "phone": "+1 000 000 0000",
+    "email": "your@email.com",
+    "resumePath": "/resume.pdf",
+    "authorAvatar": "/assets/images/avatar.jpg"
+  },
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/your-profile"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/your-github"
+    },
+    {
+      "label": "Stack Overflow",
+      "href": "https://stackoverflow.com/users/your-id"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/your-handle"
+    },
+    {
+      "label": "Twitter",
+      "href": "https://twitter.com/your-handle"
+    }
+  ]
+}

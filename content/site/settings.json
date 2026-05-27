@@ -1,0 +1,34 @@
+{
+  "seo": {
+    "home": {
+      "title": "Your Name - Your Role | Portfolio",
+      "description": "Portfolio of Your Name. Explore projects, experience, and blog posts."
+    },
+    "blog": {
+      "title": "Blog | Your Name",
+      "description": "Insights and reflections on tech and software development."
+    },
+    "archive": {
+      "title": "All Projects | Your Name",
+      "description": "Explore a diverse portfolio of projects built with modern web technologies."
+    }
+  },
+  "navigation": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects"
+  },
+  "labels": {
+    "allPosts": "All Posts",
+    "allProjects": "All Projects",
+    "viewFull": "View Full",
+    "resume": "Resume",
+    "projectArchive": "Project Archive",
+    "viewAll": "View All",
+    "posts": "Posts",
+    "readMore": "Read More",
+    "followMe": "Follow Me",
+    "blog": "blog",
+    "home": "Home"
+  }
+}
