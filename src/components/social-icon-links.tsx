@@ -52,7 +52,7 @@ export function SocialIconLinks({ includeFollowLabel = false }: SocialIconLinksP
       ) : null}
       {socials.map((social) => (
         <li key={social.label} className="mr-5 text-xs">
-          <a className="block hover:text-slate-200" target="_blank" href={hrefByLabel.get(social.label) ?? "#"} rel="noreferrer">
+          <a className="block transition-transform hover:-translate-y-0.5 hover:text-slate-200 focus-visible:-translate-y-0.5 focus-visible:text-slate-200" target="_blank" href={hrefByLabel.get(social.label) ?? "#"} rel="noreferrer">
             <span className="sr-only">{social.label}</span>
             <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox={social.viewBox} height="24" width="24" xmlns="http://www.w3.org/2000/svg">
               <path d={social.path} />

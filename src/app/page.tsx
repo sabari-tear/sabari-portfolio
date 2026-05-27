@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { ParticleHeader } from "@/components/particle-header";
 import { SocialIconLinks } from "@/components/social-icon-links";
-import { getAllPostsMeta } from "@/lib/blog";
 import { siteContent } from "@/lib/site-content";
 
 const { experiences, featuredProjects } = siteContent;
@@ -31,38 +30,21 @@ export const metadata: Metadata = {
   description: siteContent.seo.home.description,
 };
 
-function escapeRegex(value: string) {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-function renderWithHighlights(text: string, highlights: string[]) {
-  const activeHighlights = highlights.filter((item) => item.trim().length > 0);
-
-  if (activeHighlights.length === 0) {
-    return text;
-  }
-
-  const pattern = new RegExp(`(${activeHighlights.map((item) => escapeRegex(item)).join("|")})`, "gi");
-  const segments = text.split(pattern);
-
-  return segments.map((segment, index) => {
-    const isHighlight = activeHighlights.some((item) => item.toLowerCase() === segment.toLowerCase());
-
-    if (!isHighlight) {
-      return segment;
+function renderBoldMarkdown(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) => {
+    if (/^\*\*[^*]+\*\*$/.test(part)) {
+      return (
+        <strong key={`about-bold-${index}`} className="font-semibold text-slate-200">
+          {part.slice(2, -2)}
+        </strong>
+      );
     }
 
-    return (
-      <span key={`about-highlight-${segment}-${index}`} className="font-medium text-slate-200">
-        {segment}
-      </span>
-    );
+    return part;
   });
 }
 
-export default async function Home() {
-  const posts = await getAllPostsMeta();
-
+export default function Home() {
   return (
     <main>
       <div className="min-h-screen">
@@ -77,7 +59,7 @@ export default async function Home() {
             <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
               <div className="lg:flex lg:justify-between lg:gap-4">
                 <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-                  <div>
+                  <div id="namecard-block">
                     <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
                       <Link className="cursor-pointer" href="/">
                         {siteContent.site.name}
@@ -127,21 +109,27 @@ export default async function Home() {
                       </ul>
                     </nav>
                   </div>
+
+                  <blockquote className="namecard-quote max-w-xs border-l border-slate-700/60 pl-4 text-xs italic leading-relaxed text-slate-500">
+                    {siteContent.labels.bottomQuote}
+                  </blockquote>
                 </header>
 
                 <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
                   <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About Me">
-                    <div>
+                    <div id="about-content">
                       {siteContent.aboutText
                         .split(/\n\s*\n/)
                         .filter((paragraph) => paragraph.trim().length > 0)
                         .map((paragraph, index) => (
                           <p key={`about-${index}`} className="mb-4" data-reveal>
-                            {renderWithHighlights(paragraph, siteContent.aboutHighlights)}
+                            {renderBoldMarkdown(paragraph)}
                           </p>
                         ))}
                     </div>
                   </section>
+
+                  <div className="section-divider" aria-hidden="true" />
 
                   <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Work Experience">
                     <div>
@@ -155,25 +143,10 @@ export default async function Home() {
                               </header>
                               <div className="z-10 sm:col-span-6">
                                 <h3 className="font-medium leading-snug text-slate-200">
-                                  {experience.href ? (
-                                    <a
-                                      className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-blue-300 focus-visible:text-blue-300 group/link text-base"
-                                      target="_blank"
-                                      rel="noreferrer"
-                                      aria-label={`${experience.role} at ${experience.company ?? "company"}`}
-                                      href={experience.href}
-                                    >
-                                      <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-                                      <span>{experience.role}{experience.company ? " · " : ""}</span>
-                                      {experience.company ? experience.company : null}
-                                      <span className="inline-block"><ExternalArrowIcon /></span>
-                                    </a>
-                                  ) : (
-                                    <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 group/link text-base pointer-events-none cursor-auto" href="#">
-                                      <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-                                      <span>{experience.role}</span>
-                                    </a>
-                                  )}
+                                  <span className="inline-flex items-baseline font-medium leading-tight text-slate-200 text-base">
+                                    <span>{experience.role}{experience.company ? " · " : ""}</span>
+                                    {experience.company ? experience.company : null}
+                                  </span>
                                 </h3>
                                 <p className="mt-2 text-sm leading-normal">{experience.description}</p>
                                 <ul className="mt-2 flex flex-wrap" aria-label="Technologies Used">
@@ -204,6 +177,8 @@ export default async function Home() {
                       </div>
                     </div>
                   </section>
+
+                  <div className="section-divider" aria-hidden="true" />
 
                   <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected Projects">
                     <div>
@@ -263,47 +238,19 @@ export default async function Home() {
                     </div>
                   </section>
 
-                  <section id="writing" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Blog posts">
-                    <div>
-                      <ul className="group/list">
-                        {posts.slice(0, 2).map((post) => (
-                          <li key={post.slug} className="mb-12" data-reveal>
-                            <div className="group relative grid grid-cols-8 gap-4 transition-all sm:items-center sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                              <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
-                              <img
-                                alt={post.title}
-                                width={200}
-                                height={48}
-                                className="z-10 col-span-2 rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:col-span-2"
-                                src={post.image}
-                              />
-                              <div className="z-10 col-span-6">
-                                <p className="-mt-1 text-sm font-semibold leading-6">{new Date(post.date).getFullYear()}</p>
-                                <h3 className="-mt-1">
-                                  <Link
-                                    aria-label={post.title}
-                                    className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-blue-300 group/link text-base"
-                                    href={`/blog/${post.slug}`}
-                                  >
-                                    <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-                                    <span className="inline-block">{post.title}<ExternalArrowIcon /></span>
-                                  </Link>
-                                </h3>
-                              </div>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
+                  <div className="section-divider" aria-hidden="true" />
 
-                      <div className="mt-12">
-                        <Link className="inline-flex items-center leading-tight font-semibold text-slate-200 group cursor-pointer" aria-label="View All Posts" href="/blog">
-                          <span>
-                            <span className="border-b border-transparent pb-px transition group-hover:border-blue-300 motion-reduce:transition-none">{siteContent.labels.viewAll}&nbsp;</span>
-                            <span className="whitespace-nowrap">
-                              <span className="border-b border-transparent pb-px transition group-hover:border-blue-300 motion-reduce:transition-none">{siteContent.labels.posts}</span>
-                              <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="48" d="M268 112l144 144-144 144m124-144H100" /></svg>
-                            </span>
-                          </span>
+                  <section id="explore-more" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Explore more">
+                    <div>
+                      <h2 className="mb-6 text-sm font-semibold uppercase tracking-widest text-slate-500">Explore More</h2>
+                      <div className="grid gap-3 sm:grid-cols-2" data-reveal>
+                        <Link className="group rounded-md border border-slate-700/60 bg-slate-900/30 px-4 py-3 transition hover:border-blue-300/60 hover:bg-slate-800/60" href="/blog">
+                          <span className="text-sm font-medium text-slate-200">Posts</span>
+                          <span className="ml-2 inline-block text-blue-300"><ExternalArrowIcon /></span>
+                        </Link>
+                        <Link className="group rounded-md border border-slate-700/60 bg-slate-900/30 px-4 py-3 transition hover:border-blue-300/60 hover:bg-slate-800/60" href="/books">
+                          <span className="text-sm font-medium text-slate-200">Books</span>
+                          <span className="ml-2 inline-block text-blue-300"><ExternalArrowIcon /></span>
                         </Link>
                       </div>
                     </div>

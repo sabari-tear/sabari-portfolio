@@ -27,9 +27,9 @@ export default function ArchivePage() {
               {siteContent.site.name}
             </Link>
 
-            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">{siteContent.labels.allProjects}</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl" data-reveal>{siteContent.labels.allProjects}</h1>
 
-            <table id="content" className="mt-12 w-full border-collapse text-left">
+            <table id="content" className="mt-12 w-full border-collapse text-left" data-animate>
               <thead className="sticky top-0 z-10 border-b border-slate-300/10 px-6 py-5 backdrop-blur">
                 <tr>
                   <th className="py-4 pr-8 text-sm font-semibold text-slate-200">Year</th>

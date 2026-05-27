@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { ExploreSideArrows } from "@/components/explore-side-arrows";
 import { ParticleHeader } from "@/components/particle-header";
 import { getAllPostsMeta } from "@/lib/blog";
 import { siteContent } from "@/lib/site-content";
@@ -27,9 +28,14 @@ export default async function BlogPage() {
             <Link className="group mb-2 inline-flex items-center font-semibold leading-tight text-blue-300" href="/">
               {siteContent.site.name}
             </Link>
-            <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">{siteContent.labels.allPosts}</h1>
+            <div className="flex justify-center" data-reveal>
+              <div className="inline-flex items-center justify-center gap-3 whitespace-nowrap">
+                <h1 className="text-center text-3xl font-bold leading-none tracking-tight text-slate-200 sm:text-5xl">{siteContent.labels.allPosts}</h1>
+                <ExploreSideArrows />
+              </div>
+            </div>
 
-            <div className="group/list mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+            <div className="group/list mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none" data-animate>
               {posts.map((post) => (
                 <div
                   key={post.slug}

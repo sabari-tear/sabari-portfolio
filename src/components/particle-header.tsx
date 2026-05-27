@@ -148,6 +148,7 @@ export function ParticleHeader() {
             <canvas
               ref={canvasRef}
               style={{
+                pointerEvents: "none",
                 position: "absolute",
                 left: `-${overscan}px`,
                 top: `-${overscan}px`,

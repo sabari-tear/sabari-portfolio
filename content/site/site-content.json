@@ -1,25 +1,24 @@
 {
   "site": {
-    "name": "Your Name",
-    "role": "Your Role & Title",
-    "intro": "I build exceptional and accessible digital experiences for the web.",
-    "phone": "+1 000 000 0000",
-    "email": "your@email.com",
-    "resumePath": "/resume.pdf",
-    "authorAvatar": "/assets/images/avatar.jpg"
+    "name": "Alex Carter",
+    "role": "Full-Stack Engineer",
+    "intro": "I design and build fast, accessible products from idea to launch.",
+    "phone": "+1 555 013 2741",
+    "email": "alex.carter@example.com",
+    "resumePath": "/resume.pdf"
   },
   "seo": {
     "home": {
-      "title": "Your Name - Your Role | Portfolio",
-      "description": "Portfolio of Your Name. Explore projects, experience, and blog posts."
+      "title": "Alex Carter - Full-Stack Engineer Portfolio",
+      "description": "Portfolio of Alex Carter featuring product engineering work, case studies, and writing on software development."
     },
     "blog": {
-      "title": "Blog | Your Name",
-      "description": "Insights and reflections on tech and software development."
+      "title": "Engineering Blog | Alex Carter",
+      "description": "Thoughts on frontend architecture, backend systems, developer experience, and shipping better products."
     },
     "archive": {
-      "title": "All Projects | Your Name",
-      "description": "Explore a diverse portfolio of projects built with modern web technologies."
+      "title": "Project Archive | Alex Carter",
+      "description": "Browse selected and archived projects across SaaS, analytics, and developer tools."
     }
   },
   "navigation": {
@@ -43,69 +42,158 @@
   "socialLinks": [
     {
       "label": "LinkedIn",
-      "href": "https://www.linkedin.com/in/your-profile"
+      "href": "https://www.linkedin.com/in/alex-carter-dev"
     },
     {
       "label": "GitHub",
-      "href": "https://github.com/your-github"
+      "href": "https://github.com/alexcarterdev"
     },
     {
       "label": "Stack Overflow",
-      "href": "https://stackoverflow.com/users/your-id"
+      "href": "https://stackoverflow.com/users/12345678/alex-carter"
     },
     {
       "label": "Instagram",
-      "href": "https://www.instagram.com/your-handle"
+      "href": "https://www.instagram.com/alex.codes"
     },
     {
       "label": "Twitter",
-      "href": "https://twitter.com/your-handle"
+      "href": "https://x.com/alexcarterdev"
     }
   ],
-  "aboutParagraphs": [
-    "Write your first about paragraph here. Share your background, how you got into tech, and what drives you.",
-    "Write your second about paragraph here. Describe what you focus on today and what you do outside of work."
-  ],
-  "aboutInteractive": {
-    "prefix": "Outside of work, I enjoy",
-    "movies": {
-      "text": "movies",
-      "href": "https://www.imdb.com/"
-    },
-    "middle": "and",
-    "shows": {
-      "text": "shows",
-      "href": "https://www.imdb.com/"
-    },
-    "suffix": "."
-  },
+  "aboutText": "I am a **product-focused full-stack engineer** with 6+ years of experience building web applications that balance performance, accessibility, and maintainability. I enjoy working across the stack, from crafting intuitive frontend experiences in React and Next.js to designing reliable backend services and data flows. Recently, I have been focused on **developer experience**, **design systems**, and shipping features with clear business impact.",
   "experiences": [
     {
-      "years": "2022 - PRESENT",
-      "role": "Your Current Role",
-      "company": "Your Company",
-      "href": "https://yourcompany.com",
-      "description": "Describe your responsibilities, achievements, and the impact you had in this role.",
-      "technologies": ["React", "TypeScript", "Node.js"]
+      "years": "2023 - PRESENT",
+      "role": "Senior Full-Stack Engineer",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "description": "Leading delivery of customer-facing SaaS features, improving page performance, and mentoring a small frontend guild. Reduced average release cycle time by introducing stronger CI checks and reusable UI patterns.",
+      "technologies": ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Docker"]
+    },
+    {
+      "years": "2021 - 2023",
+      "role": "Frontend Engineer",
+      "company": "PixelForge Studio",
+      "href": "https://example.com",
+      "description": "Built and maintained a component-driven platform used across multiple client products. Collaborated with design and product teams to improve accessibility and consistency across releases.",
+      "technologies": ["React", "TypeScript", "Tailwind", "Storybook", "Jest"]
+    },
+    {
+      "years": "2019 - 2021",
+      "role": "Software Engineer",
+      "company": "DataMosaic",
+      "href": "https://example.com",
+      "description": "Developed dashboards and internal tooling for analytics workflows, including ingestion pipelines and reporting interfaces for operations and finance teams.",
+      "technologies": ["JavaScript", "Vue", "Node.js", "MongoDB", "Redis"]
     }
   ],
   "featuredProjects": [
     {
+      "year": "2026",
+      "name": "Finlytics Dashboard",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "summary": "A multi-tenant analytics dashboard for subscription metrics, cohort tracking, and churn prediction with role-based reporting.",
+      "technologies": ["Next.js", "TypeScript", "tRPC", "PostgreSQL", "Tailwind"],
+      "image": "/assets/images/thumbnail20ff.jpg"
+    },
+    {
+      "year": "2025",
+      "name": "SupportIQ Assistant",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "summary": "Internal support workspace that unifies customer context, knowledge base search, and response templates to reduce resolution time.",
+      "technologies": ["React", "TypeScript", "Node.js", "OpenAI API", "Redis"],
+      "image": "/assets/images/thumbnailab1f.jpg"
+    },
+    {
       "year": "2024",
-      "name": "Your Featured Project",
-      "href": "https://yourproject.com",
-      "summary": "Describe what this project does and the problem it solves.",
-      "technologies": ["Next.js", "TypeScript", "Tailwind"],
-      "image": "/assets/images/placeholder.jpg"
+      "name": "Studio Design System",
+      "company": "PixelForge Studio",
+      "href": "https://example.com",
+      "summary": "A shared UI system with tokens, components, and documentation used across multiple product squads.",
+      "technologies": ["React", "Storybook", "TypeScript", "CSS Variables"],
+      "image": "/assets/images/thumbnaile27f.jpg"
     }
   ],
   "archiveProjects": [
     {
+      "year": "2026",
+      "name": "Finlytics Dashboard",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "technologies": ["Next.js", "TypeScript", "tRPC", "PostgreSQL", "Tailwind"],
+      "linkLabel": "example.com"
+    },
+    {
+      "year": "2025",
+      "name": "SupportIQ Assistant",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "technologies": ["React", "TypeScript", "Node.js", "Redis"],
+      "linkLabel": "example.com"
+    },
+    {
       "year": "2024",
-      "name": "Your Archive Project",
-      "href": "https://yourproject.com",
-      "technologies": ["Next.js", "TypeScript", "Tailwind"],
-      "linkLabel": "yourproject.com"
+      "name": "Studio Design System",
+      "company": "PixelForge Studio",
+      "href": "https://example.com",
+      "technologies": ["React", "Storybook", "TypeScript"],
+      "linkLabel": "example.com"
+    },
+    {
+      "year": "2023",
+      "name": "Realtime Ops Monitor",
+      "company": "DataMosaic",
+      "href": "https://example.com",
+      "technologies": ["Vue", "Node.js", "WebSockets", "MongoDB"],
+      "linkLabel": "example.com"
+    },
+    {
+      "year": "2022",
+      "name": "Hiring Pipeline Portal",
+      "href": "https://example.com",
+      "technologies": ["React", "TypeScript", "Firebase"],
+      "linkLabel": "example.com"
+    }
+  ],
+  "booksRead": [
+    {
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "notes": "Great for understanding reliability, scalability, and distributed system trade-offs."
+    },
+    {
+      "title": "The Pragmatic Programmer",
+      "author": "David Thomas & Andrew Hunt",
+      "notes": "Practical mindset shifts for writing maintainable and resilient software."
+    }
+  ],
+  "interviewExperiences": [
+    {
+      "company": "ScaleForge",
+      "role": "Senior Frontend Engineer",
+      "year": "2025",
+      "summary": "4 rounds: React architecture, system design, and behavioral discussion."
+    },
+    {
+      "company": "CloudMetric",
+      "role": "Full-Stack Engineer",
+      "year": "2024",
+      "summary": "Take-home challenge plus deep dive on API design and performance optimization."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services",
+      "year": "2025"
+    },
+    {
+      "name": "Professional Scrum Master I",
+      "issuer": "Scrum.org",
+      "year": "2024"
     }
   ]
 }

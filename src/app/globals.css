@@ -2,8 +2,37 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --ui-fade-duration: 280ms;
+  --ui-hover-duration: 240ms;
+  --ui-reveal-duration: 680ms;
+  --ui-fade-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ui-reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  :where(a, button, [role="button"], .nav .nav-indicator, .nav .nav-text, .namecard-quote, .group, .group * ) {
+    transition-duration: 0ms !important;
+  }
+}
+
 body {
   margin: 0;
+}
+
+:where(a, button, [role="button"], .nav .nav-indicator, .nav .nav-text, .namecard-quote, .group, .group * ) {
+  transition-property: opacity, color, background-color, border-color, box-shadow, transform, filter;
+  transition-duration: var(--ui-fade-duration);
+  transition-timing-function: var(--ui-fade-ease);
+  transform: translateZ(0);
 }
 
 .spotlight-layer {
@@ -16,41 +45,58 @@ body {
 
 [data-animate] {
   opacity: 0;
-  transform: translateY(18px) scale(0.985);
-  transition: opacity 540ms ease, transform 540ms ease;
+  transform: translateY(14px) scale(0.99);
+  filter: blur(3px);
+  transition: opacity var(--ui-reveal-duration) var(--ui-reveal-ease), transform var(--ui-reveal-duration) var(--ui-reveal-ease), filter var(--ui-reveal-duration) var(--ui-reveal-ease);
   transition-delay: var(--motion-delay, 0ms);
-  will-change: opacity, transform;
+  will-change: opacity, transform, filter;
 }
 
 [data-animate].in-view {
   opacity: 1;
   transform: translateY(0) scale(1);
+  filter: blur(0);
 }
 
 [data-enter] {
   opacity: 0;
-  transform: scale(0.7) rotateX(10deg) translateZ(0);
-  transition: opacity 620ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 620ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateY(16px) scale(0.965);
+  filter: blur(4px);
+  transition: opacity var(--ui-reveal-duration) var(--ui-reveal-ease), transform var(--ui-reveal-duration) var(--ui-reveal-ease), filter var(--ui-reveal-duration) var(--ui-reveal-ease);
   transition-delay: var(--motion-delay, 0ms);
-  will-change: opacity, transform;
+  will-change: opacity, transform, filter;
 }
 
 [data-enter].in-view {
   opacity: 1;
-  transform: scale(1) rotateX(0deg) translateZ(0);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
 }
 
 [data-reveal] {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 520ms ease, transform 520ms ease;
+  transform: translateY(18px);
+  filter: blur(3px);
+  transition: opacity var(--ui-reveal-duration) var(--ui-reveal-ease), transform var(--ui-reveal-duration) var(--ui-reveal-ease), filter var(--ui-reveal-duration) var(--ui-reveal-ease);
   transition-delay: var(--motion-delay, 0ms);
-  will-change: opacity, transform;
+  will-change: opacity, transform, filter;
 }
 
 [data-reveal].in-view {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (hover: hover) {
+  .group\/list > :where(li, tr, div) {
+    transition: opacity var(--ui-hover-duration) var(--ui-fade-ease), transform var(--ui-hover-duration) var(--ui-fade-ease), filter var(--ui-hover-duration) var(--ui-fade-ease);
+  }
+
+  .group\/list > :where(li, tr, div):hover {
+    transform: translateY(-1px);
+    filter: saturate(1.05);
+  }
 }
 
 .nav a.active .nav-indicator {
@@ -62,7 +108,51 @@ body {
   color: rgb(226 232 240);
 }
 
+body.quote-indicated .nav a.active .nav-indicator {
+  width: 2rem;
+  background-color: rgb(71 85 105);
+}
+
+body.quote-indicated .nav a.active .nav-text {
+  color: rgb(100 116 139);
+}
+
 .particle-mask-fade {
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 72%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 72%, rgba(0, 0, 0, 0) 100%);
+}
+
+.section-divider {
+  height: 1px;
+  margin: 0 0 2.75rem;
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.42), transparent);
+  opacity: 0;
+  transform: scaleX(0.82);
+  transform-origin: center;
+  transition: opacity 180ms ease, transform 220ms ease;
+}
+
+body.show-scroll-dividers .section-divider {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+body.suppress-scroll-dividers .section-divider {
+  opacity: 0;
+  transform: scaleX(0.82);
+}
+
+.namecard-quote {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  body.show-namecard-quote .namecard-quote {
+    display: block;
+  }
+
+  body.quote-indicated .namecard-quote {
+    border-left-color: rgb(125 211 252 / 0.9);
+    color: rgb(186 230 253);
+  }
 }

@@ -29,6 +29,25 @@ export type ProjectItem = {
   linkLabel?: string;
 };
 
+export type BookItem = {
+  title: string;
+  author: string;
+  notes?: string;
+};
+
+export type InterviewExperienceItem = {
+  company: string;
+  role: string;
+  year: string;
+  summary: string;
+};
+
+export type CertificationItem = {
+  name: string;
+  issuer: string;
+  year: string;
+};
+
 export type SiteContent = {
   site: {
     name: string;
@@ -37,7 +56,6 @@ export type SiteContent = {
     phone: string;
     email: string;
     resumePath: string;
-    authorAvatar: string;
   };
   seo: {
     home: { title: string; description: string };
@@ -61,13 +79,16 @@ export type SiteContent = {
     followMe: string;
     blog: string;
     home: string;
+    bottomQuote: string;
   };
   socialLinks: SocialLink[];
   aboutText: string;
-  aboutHighlights: string[];
   experiences: ExperienceItem[];
   featuredProjects: ProjectItem[];
   archiveProjects: ProjectItem[];
+  booksRead: BookItem[];
+  interviewExperiences: InterviewExperienceItem[];
+  certifications: CertificationItem[];
 };
 
 export const siteContent: SiteContent = {

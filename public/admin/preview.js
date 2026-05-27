@@ -60,11 +60,9 @@ var IdentityPreview = createClass({
     var intro   = site ? site.get("intro")  : "";
     var email   = site ? site.get("email")  : "";
     var phone   = site ? site.get("phone")  : "";
-    var avatar  = site ? site.get("authorAvatar") : "";
 
     return h("div", { style: style.page },
       h("div", { style: { display: "flex", gap: "1.5rem", alignItems: "flex-start", marginBottom: "2rem" } },
-        avatar && h("img", { src: avatar, style: { width: "80px", height: "80px", borderRadius: "50%", objectFit: "cover", border: "2px solid rgba(255,255,255,0.1)" } }),
         h("div", null,
           h("h1", { style: style.name }, name),
           h("p",  { style: style.role }, role),
@@ -94,28 +92,28 @@ var AboutPreview = createClass({
   render: function () {
     var entry = this.props.entry;
     var aboutText = entry.getIn(["data", "aboutText"]) || "";
-    var highlights = entry.getIn(["data", "aboutHighlights"]);
-    var activeHighlights = highlights ? highlights.toJS().filter(function (item) { return item && item.trim().length > 0; }) : [];
 
     var paragraphs = aboutText
       .split(/\n\s*\n/)
       .map(function (p) { return p.trim(); })
       .filter(function (p) { return p.length > 0; });
 
+    function renderBoldMarkdown(text, keyPrefix) {
+      return text.split(/(\*\*[^*]+\*\*)/g).map(function (part, index) {
+        if (/^\*\*[^*]+\*\*$/.test(part)) {
+          return h("strong", { key: keyPrefix + "-bold-" + index, style: { color: "#e2e8f0", fontWeight: 700 } }, part.slice(2, -2));
+        }
+
+        return part;
+      });
+    }
+
     return h("div", { style: style.page },
       h("p", { style: style.heading }, "About"),
       paragraphs.map(function(p, i) {
-        return h("p", { key: i, style: { marginBottom: "1rem", color: "#94a3b8" } }, p);
+        return h("p", { key: i, style: { marginBottom: "1rem", color: "#94a3b8" } }, renderBoldMarkdown(p, "about-" + i));
       }),
-      h("hr", { style: style.divider }),
-      h("p", { style: style.heading }, "Highlight Phrases"),
-      activeHighlights.length > 0
-        ? h("div", null,
-            activeHighlights.map(function(item, i) {
-              return h("span", { key: i, style: style.pill }, item);
-            })
-          )
-        : h("p", { style: style.muted }, "No highlight phrases configured.")
+      h("p", { style: Object.assign({}, style.muted, { marginTop: "1rem" }) }, "Tip: use **double asterisks** to bold words in About text.")
     );
   }
 });

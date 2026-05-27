@@ -17,7 +17,7 @@ export function SocialLinks({ className }: SocialLinksProps) {
             href={social.href}
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-slate-400 transition hover:text-cyan-300"
+            className="inline-flex items-center text-sm text-slate-400 transition-transform hover:-translate-y-0.5 hover:text-cyan-300 focus-visible:-translate-y-0.5 focus-visible:text-cyan-300"
           >
             {social.label}
           </Link>

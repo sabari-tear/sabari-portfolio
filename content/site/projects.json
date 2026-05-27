@@ -1,21 +1,142 @@
 {
   "featuredProjects": [
     {
+      "year": "2026",
+      "name": "Finlytics Dashboard",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "summary": "A multi-tenant analytics dashboard for subscription metrics, cohort tracking, and churn prediction with role-based reporting.",
+      "technologies": ["Next.js", "TypeScript", "tRPC", "PostgreSQL", "Tailwind"],
+      "image": "/assets/images/thumbnail20ff.jpg"
+    },
+    {
+      "year": "2025",
+      "name": "SupportIQ Assistant",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "summary": "Internal support workspace that unifies customer context, knowledge base search, and response templates to reduce resolution time.",
+      "technologies": ["React", "TypeScript", "Node.js", "OpenAI API", "Redis"],
+      "image": "/assets/images/thumbnailab1f.jpg"
+    },
+    {
       "year": "2024",
-      "name": "Your Featured Project",
-      "href": "https://yourproject.com",
-      "summary": "Describe what this project does and the problem it solves.",
-      "technologies": ["Next.js", "TypeScript", "Tailwind"],
-      "image": "/assets/images/placeholder.jpg"
+      "name": "Studio Design System",
+      "company": "PixelForge Studio",
+      "href": "https://example.com",
+      "summary": "A shared UI system with tokens, components, and documentation used across multiple product squads.",
+      "technologies": ["React", "Storybook", "TypeScript", "CSS Variables"],
+      "image": "/assets/images/thumbnaile27f.jpg"
     }
   ],
   "archiveProjects": [
     {
+      "year": "2026",
+      "name": "Finlytics Dashboard",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "technologies": ["Next.js", "TypeScript", "tRPC", "PostgreSQL", "Tailwind"],
+      "linkLabel": "example.com"
+    },
+    {
+      "year": "2025",
+      "name": "SupportIQ Assistant",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "technologies": ["React", "TypeScript", "Node.js", "Redis"],
+      "linkLabel": "example.com"
+    },
+    {
       "year": "2024",
-      "name": "Your Archive Project",
-      "href": "https://yourproject.com",
-      "technologies": ["Next.js", "TypeScript", "Tailwind"],
-      "linkLabel": "yourproject.com"
+      "name": "Studio Design System",
+      "company": "PixelForge Studio",
+      "href": "https://example.com",
+      "technologies": ["React", "Storybook", "TypeScript"],
+      "linkLabel": "example.com"
+    },
+    {
+      "year": "2023",
+      "name": "Realtime Ops Monitor",
+      "company": "DataMosaic",
+      "href": "https://example.com",
+      "technologies": ["Vue", "Node.js", "WebSockets", "MongoDB"],
+      "linkLabel": "example.com"
+    },
+    {
+      "year": "2022",
+      "name": "Hiring Pipeline Portal",
+      "href": "https://example.com",
+      "technologies": ["React", "TypeScript", "Firebase"],
+      "linkLabel": "example.com"
+    }
+  ],
+  "booksRead": [
+    {
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "notes": "Great for understanding reliability, scalability, and distributed system trade-offs."
+    },
+    {
+      "title": "The Pragmatic Programmer",
+      "author": "David Thomas & Andrew Hunt",
+      "notes": "Practical mindset shifts for writing maintainable and resilient software."
+    },
+    {
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "notes": "Useful patterns for improving code structure without changing behavior."
+    },
+    {
+      "title": "Clean Architecture",
+      "author": "Robert C. Martin",
+      "notes": "Clear guidance on boundaries, dependencies, and long-term maintainability."
+    }
+  ],
+  "interviewExperiences": [
+    {
+      "company": "ScaleForge",
+      "role": "Senior Frontend Engineer",
+      "year": "2025",
+      "summary": "4 rounds: React architecture, system design, and behavioral discussion."
+    },
+    {
+      "company": "CloudMetric",
+      "role": "Full-Stack Engineer",
+      "year": "2024",
+      "summary": "Take-home challenge plus deep dive on API design and performance optimization."
+    },
+    {
+      "company": "Nimbus Data",
+      "role": "Frontend Platform Engineer",
+      "year": "2023",
+      "summary": "Panel interview focused on design systems, accessibility, and performance budgets."
+    },
+    {
+      "company": "VertexFlow",
+      "role": "Software Engineer II",
+      "year": "2022",
+      "summary": "Two-stage process with coding exercise and system design discussion on event-driven APIs."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services",
+      "year": "2025"
+    },
+    {
+      "name": "Professional Scrum Master I",
+      "issuer": "Scrum.org",
+      "year": "2024"
+    },
+    {
+      "name": "Microsoft Certified: Azure Developer Associate",
+      "issuer": "Microsoft",
+      "year": "2023"
+    },
+    {
+      "name": "Google Cloud Digital Leader",
+      "issuer": "Google Cloud",
+      "year": "2022"
     }
   ]
 }

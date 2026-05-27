@@ -1,33 +1,32 @@
 {
   "site": {
-    "name": "Your Name",
-    "role": "Your Role & Title",
-    "intro": "I build exceptional and accessible digital experiences for the web.",
-    "phone": "+1 000 000 0000",
-    "email": "your@email.com",
-    "resumePath": "/resume.pdf",
-    "authorAvatar": "/assets/images/avatar.jpg"
+    "name": "Alex Carter",
+    "role": "Full-Stack Engineer",
+    "intro": "I design and build fast, accessible products from idea to launch.",
+    "phone": "+1 555 013 2741",
+    "email": "alex.carter@example.com",
+    "resumePath": "/resume.pdf"
   },
   "socialLinks": [
     {
       "label": "LinkedIn",
-      "href": "https://www.linkedin.com/in/your-profile"
+      "href": "https://www.linkedin.com/in/alex-carter-dev"
     },
     {
       "label": "GitHub",
-      "href": "https://github.com/your-github"
+      "href": "https://github.com/alexcarterdev"
     },
     {
       "label": "Stack Overflow",
-      "href": "https://stackoverflow.com/users/your-id"
+      "href": "https://stackoverflow.com/users/12345678/alex-carter"
     },
     {
       "label": "Instagram",
-      "href": "https://www.instagram.com/your-handle"
+      "href": "https://www.instagram.com/alex.codes"
     },
     {
       "label": "Twitter",
-      "href": "https://twitter.com/your-handle"
+      "href": "https://x.com/alexcarterdev"
     }
   ]
 }

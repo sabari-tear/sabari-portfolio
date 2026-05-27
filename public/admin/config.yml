@@ -51,7 +51,6 @@ collections:
               - { label: Phone, name: phone, widget: string }
               - { label: Email, name: email, widget: string }
               - { label: Resume PDF Path, name: resumePath, widget: string }
-              - { label: Avatar Image, name: authorAvatar, widget: image }
           - label: Social Links
             name: socialLinks
             widget: list
@@ -69,12 +68,7 @@ collections:
         fields:
           - label: About Text
             name: aboutText
-            widget: text
-          - label: Highlight Phrases
-            name: aboutHighlights
-            widget: list
-            collapsed: true
-            field: { label: Phrase, name: phrase, widget: string }
+            widget: markdown
 
       # ── 3. Experience ───────────────────────────────────────────
       - label: Experience
@@ -135,6 +129,34 @@ collections:
                 widget: list
                 field: { label: Technology, name: tech, widget: string }
               - { label: Link Label, name: linkLabel, widget: string, required: false }
+          - label: Books Read
+            name: booksRead
+            widget: list
+            collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Author, name: author, widget: string }
+              - { label: Notes, name: notes, widget: text, required: false }
+          - label: Interview Experiences
+            name: interviewExperiences
+            widget: list
+            collapsed: true
+            summary: "{{fields.role}} @ {{fields.company}} ({{fields.year}})"
+            fields:
+              - { label: Company, name: company, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Year, name: year, widget: string }
+              - { label: Summary, name: summary, widget: text }
+          - label: Course Certifications
+            name: certifications
+            widget: list
+            collapsed: true
+            summary: "{{fields.name}} ({{fields.year}})"
+            fields:
+              - { label: Certification Name, name: name, widget: string }
+              - { label: Issuer, name: issuer, widget: string }
+              - { label: Year, name: year, widget: string }
 
       # ── 5. Site Settings (Advanced) ───────────────────────────
       - label: "Site Settings (Advanced)"
@@ -186,3 +208,4 @@ collections:
               - { label: Follow Me, name: followMe, widget: string }
               - { label: Blog, name: blog, widget: string }
               - { label: Home, name: home, widget: string }
+              - { label: Bottom Quote, name: bottomQuote, widget: text }

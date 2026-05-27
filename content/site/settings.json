@@ -1,16 +1,16 @@
 {
   "seo": {
     "home": {
-      "title": "Your Name - Your Role | Portfolio",
-      "description": "Portfolio of Your Name. Explore projects, experience, and blog posts."
+      "title": "Alex Carter - Full-Stack Engineer Portfolio",
+      "description": "Portfolio of Alex Carter featuring product engineering work, case studies, and writing on software development."
     },
     "blog": {
-      "title": "Blog | Your Name",
-      "description": "Insights and reflections on tech and software development."
+      "title": "Engineering Blog | Alex Carter",
+      "description": "Thoughts on frontend architecture, backend systems, developer experience, and shipping better products."
     },
     "archive": {
-      "title": "All Projects | Your Name",
-      "description": "Explore a diverse portfolio of projects built with modern web technologies."
+      "title": "Project Archive | Alex Carter",
+      "description": "Browse selected and archived projects across SaaS, analytics, and developer tools."
     }
   },
   "navigation": {
@@ -29,6 +29,7 @@
     "readMore": "Read More",
     "followMe": "Follow Me",
     "blog": "blog",
-    "home": "Home"
+    "home": "Home",
+    "bottomQuote": "Great products are built with clear thinking, steady execution, and relentless iteration."
   }
 }

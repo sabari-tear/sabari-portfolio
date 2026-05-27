@@ -1,12 +1,28 @@
 {
   "experiences": [
     {
-      "years": "2022 - PRESENT",
-      "role": "Your Current Role",
-      "company": "Your Company",
-      "href": "https://yourcompany.com",
-      "description": "Describe your responsibilities, achievements, and the impact you had in this role.",
-      "technologies": ["React", "TypeScript", "Node.js"]
+      "years": "2023 - PRESENT",
+      "role": "Senior Full-Stack Engineer",
+      "company": "Northbridge Labs",
+      "href": "https://example.com",
+      "description": "Leading delivery of customer-facing SaaS features, improving page performance, and mentoring a small frontend guild. Reduced average release cycle time by introducing stronger CI checks and reusable UI patterns.",
+      "technologies": ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Docker"]
+    },
+    {
+      "years": "2021 - 2023",
+      "role": "Frontend Engineer",
+      "company": "PixelForge Studio",
+      "href": "https://example.com",
+      "description": "Built and maintained a component-driven platform used across multiple client products. Collaborated with design and product teams to improve accessibility and consistency across releases.",
+      "technologies": ["React", "TypeScript", "Tailwind", "Storybook", "Jest"]
+    },
+    {
+      "years": "2019 - 2021",
+      "role": "Software Engineer",
+      "company": "DataMosaic",
+      "href": "https://example.com",
+      "description": "Developed dashboards and internal tooling for analytics workflows, including ingestion pipelines and reporting interfaces for operations and finance teams.",
+      "technologies": ["JavaScript", "Vue", "Node.js", "MongoDB", "Redis"]
     }
   ]
 }

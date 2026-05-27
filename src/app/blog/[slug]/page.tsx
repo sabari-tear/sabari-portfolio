@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-24">
-      <nav className="mb-20" aria-label="breadcrumb">
+      <nav className="mb-20" aria-label="breadcrumb" data-reveal>
         <ol className="flex flex-wrap">
           <li className="mr-1.5">
             <Link className="hover:text-slate-200 focus-visible:text-slate-200 cursor-pointer" href="/">
@@ -68,15 +68,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="mt-6">
         <h1 className="leading-light font-bold text-2xl lg:text-5xl tracking-widest text-slate-200" data-reveal>{post.title}</h1>
 
-        <div className="mt-6 flex items-center justify-between text-sm border-b border-t border-slate-600 py-3" data-animate>
+        <div className="mt-6 flex items-center justify-between text-sm border-b border-t border-slate-600 py-3" data-reveal>
           <div className="inline-flex items-center">
-            <img
-              alt={siteContent.site.name}
-              width={28}
-              height={28}
-              className="object-cover rounded-full inline-block mr-2"
-              src={siteContent.site.authorAvatar}
-            />
             {siteContent.site.name}
           </div>
           <div>{new Date(post.date).toLocaleDateString("en-US")}</div>

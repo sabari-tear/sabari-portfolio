@@ -1,7 +1,3 @@
 {
-  "aboutText": "Write your about paragraph here. You can add multiple paragraphs by separating them with a blank line.",
-  "aboutHighlights": [
-    "your key strength",
-    "your focus area"
-  ]
+  "aboutText": "I am a **product-focused full-stack engineer** with 6+ years of experience building web applications that balance performance, accessibility, and maintainability. \n \n I enjoy working across the stack, from crafting intuitive frontend experiences in React and Next.js to designing reliable backend services and data flows. \n \n Recently, I have been focused on **developer experience**, **design systems**, and shipping features with clear business impact."
 }

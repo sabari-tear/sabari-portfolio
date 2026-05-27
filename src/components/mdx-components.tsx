@@ -7,7 +7,7 @@ export const mdxComponents: MDXComponents = {
   ol: ({ children }) => <ol className="mb-6 list-decimal pl-6">{children}</ol>,
   li: ({ children }) => <li className="mb-2">{children}</li>,
   a: ({ children, href }) => (
-    <a className="font-medium text-blue-300 hover:text-slate-200" href={href}>
+    <a className="font-medium text-blue-300 underline decoration-blue-300/50 underline-offset-4 transition hover:text-slate-200 hover:decoration-slate-200 focus-visible:text-slate-200 focus-visible:decoration-slate-200" href={href}>
       {children}
     </a>
   ),
